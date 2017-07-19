@@ -41,16 +41,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let error = error {
                 print("FH init failed. Error = \(error)")
                 if FH.isOnline == false {
-                    print("Make sure you're online.")
+                    self.presentAlert("Offline", message: "Make sure you're online.")
                 } else {
-                    print("Please fill in fhconfig.plist file.")
+                    if error.code > 0 {
+                        self.presentAlert("Init error", message: error.localizedDescription)
+                    } else {
+                        self.presentAlert("Missing Configuration", message: "Please fill in fhconfig.plist file.")
+                    }
                 }
                 return
             }
             print("initialized OK:: Starting SyncClient")
             self.dataManager.start()
-        }        
+        }
         return true
+    }
+
+    open func presentAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     // MARK: - Core Data stack
     
