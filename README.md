@@ -4,14 +4,14 @@
 > ObjC version is available [here](https://github.com/feedhenry-templates/sync-ios-app).
 
 Author: Corinne Krych   
-Level: Intermediate  
-Technologies: Swift 3, iOS, RHMAP, CocoaPods. 
-Summary: A demonstration of how to synchronize a single collection with RHMAP. 
-Community Project : [Feed Henry](http://feedhenry.org) 
-Target Product: RHMAP  
+Level: Intermediate   
+Technologies: Swift 3, iOS, RHMAP, CocoaPods.   
+Summary: A demonstration of how to synchronize a single collection with RHMAP.   
+Community Project : [Feed Henry](http://feedhenry.org)   
+Target Product: RHMAP   
 Product Versions: RHMAP 3.7.0+   
-Source: https://github.com/feedhenry-templates/sync-ios-app  
-Prerequisites: fh-ios-swift-sdk : 5+, Xcode : 8+, iOS SDK : iOS8+, CocoaPods: 1.1.0+
+Source: https://github.com/feedhenry-templates/sync-ios-swift   
+Prerequisites: fh-ios-swift-sdk: 5+, Xcode: 8+, iOS SDK: iOS 9+, CocoaPods: 1.3.0+
 
 ## What is it?
 
