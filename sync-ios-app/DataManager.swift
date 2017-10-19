@@ -40,7 +40,7 @@ open class DataManager: NSObject {
         syncClient.manage(withDataId: DATA_ID, andConfig:nil, andQuery:[:])
     }
     
-    open func onSyncMessage(_ note: Notification) {
+    @objc open func onSyncMessage(_ note: Notification) {
         if let msg = note.object as? FHSyncNotificationMessage, let code = msg.code {
             print("Got notification: \(msg)")
             if code == REMOTE_UPDATE_APPLIED_MESSAGE {

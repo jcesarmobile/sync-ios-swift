@@ -24,6 +24,6 @@ extension ShoppingItem {
     @NSManaged public var created: Date?
     
     open override var description: String {
-        return "uid=\(self.uid)::name=\(self.name)::created=\(self.created)"
+        return "uid=\(String(describing: self.uid))::name=\(String(describing: self.name))::created=\(String(describing: self.created))"
     }
 }

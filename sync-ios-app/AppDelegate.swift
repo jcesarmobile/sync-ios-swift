@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = self.window?.rootViewController as? UINavigationController
         navController?.navigationBar.barTintColor = UIColor.red
         navController?.navigationBar.tintColor = UIColor.white
-        navController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         syncClient = FHSyncClient.getInstance()
         dataManager = DataManager()
         dataManager.syncClient = syncClient

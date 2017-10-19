@@ -34,7 +34,7 @@ open class RootViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    open func onDataUpdated(_ note: Notification) {
+    @objc open func onDataUpdated(_ note: Notification) {
         print("::onDataUpdated::refresh tableview")
         items = dataManager.listItems()
 
